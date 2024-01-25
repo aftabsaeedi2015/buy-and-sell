@@ -18,8 +18,3 @@ react native image picker
 
 
 
-
-#demo
-demo file included in the root directory of the repo
-
-
