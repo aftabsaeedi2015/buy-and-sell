@@ -63,7 +63,7 @@ function SellerBuyerInteractionScreen({ navigation }) {
   };
   useEffect(() => {
     fetchAdChatHistory();
-  }, [ changeIntData]);
+  }, [chats, changeIntData]);
   // for real time interaction add the chats state to the dependency array for the useeffect
   const handleRestartChatInteraction = async () => {
     setLoading(true);
@@ -146,12 +146,12 @@ function SellerBuyerInteractionScreen({ navigation }) {
           </>
         )}
         {!showRestartInteractionMessage &&
-          chats.slice([1]).map((chat) => {
+          chats.slice([1]).map((chat,index) => {
             const senderId = chat.senderId;
             const isSent = senderId === userId;
             return (
               <ChatBubble
-                key={Math.random()}
+                key={index}
                 message={chat.message}
                 isSent={isSent}
               />

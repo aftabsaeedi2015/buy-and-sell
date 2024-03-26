@@ -79,7 +79,7 @@ text:{
   const user = useSelector((state) => state.user);
   const userId = user.userId;
   const changeInData = user.changeInData;
-  const [imageUrl, setImageUrl] = useState("");
+  const [imageUrl, setImageUrl] = useState(null);
   const [snackbarVisiblility, setSnackbarVisibility] = useState(false);
   const [snackbarValue, setSnackbarValue] = useState("");
   const [status, setStatus] = useState(false);

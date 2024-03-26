@@ -16,7 +16,7 @@ import {
 } from "../screens/data/dbOperations";
 import { useSelector, useDispatch } from "react-redux";
 
-function FavoritesListItem({ navigation, key, item }) {
+function FavoritesListItem({ navigation, item }) {
   const theme = useTheme();
   const styles = StyleSheet.create({
     parentContainer: {
@@ -87,7 +87,7 @@ function FavoritesListItem({ navigation, key, item }) {
   };
   const removeFromFavoriteAds = async () => {
     try {
-      const response = await removeFromFavorites(userId, item.adId); // You need to create this function
+      const response = await removeFromFavorites(userId, item.adId);
       handleSnackbar(response);
       dispatch({ type: "changeInData" });
     } catch (err) {
@@ -108,7 +108,7 @@ function FavoritesListItem({ navigation, key, item }) {
 
   return (
     <>
-      <View style={styles.parentContainer} key={key}>
+      <View style={styles.parentContainer} >
         <TouchableOpacity
           onPress={() => {
             navigation.navigate("ItemDescription", { item: item });

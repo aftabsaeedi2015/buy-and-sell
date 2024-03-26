@@ -14,7 +14,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import ItemDescription from "./app/screens/itemDescriptionScreen";
 import PostItem from "./app/screens/postItemScreen";
 import ReceivedMessagesScreen from "./app/screens/receivedMessagesScreen";
-import CategorieScreen from "./app/screens/categorieScreen";
+// import CategorieScreen from "./app/screens/categorieScreen";
 import SellerBuyerInteractionScreen from "./app/screens/sellerBuyerInteractionScreen";
 import { Provider } from "react-redux";
 import store from "./app/state/store";
@@ -35,11 +35,11 @@ export default function App() {
     dark: isDarkMode,
     roundness: 2,
     colors: {
-      primary: isDarkMode ? "#F2F2F2" : "#f46036", // Your primary color
+      primary: isDarkMode ? "#F2F2F2" : "#f46036",
       secondary: "#33384E",
       border: isDarkMode ? "#32de8a" : "#f46036",
-      background: isDarkMode ? "#24293E" : "#32de8a", // Background color
-      text: isDarkMode ? "#f4f5fc" : "black", // Text color
+      background: isDarkMode ? "#24293E" : "#32de8a",
+      text: isDarkMode ? "#f4f5fc" : "black",
       icon: "#bebbff",
       accent: '#bebbff',
       accentText: '#24293E'
@@ -48,24 +48,24 @@ export default function App() {
   const Stack = createNativeStackNavigator();
   const headerStyle = {
     headerStyle: {
-      backgroundColor: theme.colors.secondary, // Set the background color to blue
+      backgroundColor: theme.colors.secondary,
     },
     headerTintColor: '#fff',
     headerTitleStyle: {
-      alignItems: "center", // Center the title
-      fontWeight: "bold", // Make the title text bold
+      alignItems: "center",
+      fontWeight: "bold",
       justifyContent: 'center'
     },
     headerBackVisible: false
   }
   const headerStyle2 = {
     headerStyle: {
-      backgroundColor: theme.colors.secondary, // Set the background color to blue
+      backgroundColor: theme.colors.secondary,
     },
     headerTintColor: '#fff',
     headerTitleStyle: {
-      alignItems: "center", // Center the title
-      fontWeight: "bold", // Make the title text bold
+      alignItems: "center",
+      fontWeight: "bold",
       justifyContent: 'center'
     },
     headerBackVisible: true
@@ -113,9 +113,9 @@ export default function App() {
             <Stack.Screen name="Post" component={PostItem}
              options = {headerStyle}
             />
-            <Stack.Screen name="Categories" component={CategorieScreen}
+            {/* <Stack.Screen name="Categories" component={CategorieScreen}
              options = {headerStyle}
-            />
+            /> */}
             <Stack.Screen name="Favorites" component={FavoritesScreen}
              options = {headerStyle}
               />

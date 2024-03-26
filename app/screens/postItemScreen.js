@@ -20,7 +20,7 @@ import {
   ScrollView,
   SafeAreaView
 } from "react-native";
-import Icon from "react-native-vector-icons/FontAwesome5";
+import Icon from "react-native-vector-icons/FontAwesome";
 import MainMenuBar from "../styledComponents/mainMenuBar";
 import { app } from "../../firebase";
 import {
@@ -370,11 +370,11 @@ function PostItem({ navigation }) {
             </HelperText>
             {showCategories ? (
               <View style={styles.categoriesDropdown}>
-                {categories.map((category) => {
+                {categories.map((category,index) => {
                   return (
                     <>
                       <List.Item
-                        key={Math.random()}
+                        key={index}
                         onPress={() => {
                           setShowCategories(false);
                           setAd({ ...ad, category: category.title });

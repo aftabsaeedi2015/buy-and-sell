@@ -25,7 +25,6 @@ function FavoritesScreen({ navigation }) {
       gap: 5,
       flex: 1,
       alignItems: "center",
-      // justifyContent: 'center'
     },
     itemRow: {
       display: "flex",

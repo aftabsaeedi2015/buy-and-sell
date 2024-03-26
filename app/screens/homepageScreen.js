@@ -25,7 +25,7 @@ import MainMenuBar from "../styledComponents/mainMenuBar";
 function HomepageScreen({ navigation }) {
   const [ads, setAds] = useState([]);
   const theme = useTheme();
-  
+
   const user = useSelector((state) => state.user);
   const changeInData = user.changeInData;
   const [loading, setLoading] = useState(true);
@@ -75,17 +75,14 @@ function HomepageScreen({ navigation }) {
     itemRow: {
       display: "flex",
       flexDirection: "row",
-      // alignItems: 'flex-start',
       width: "100%",
       flexWrap: "wrap",
       backgroundColor: theme.colors.background,
-      // flex: 1,
       gap: 10,
       justifyContent: "flex-start",
     },
     searchBarContainer: {
       backgroundColor: theme.colors.accent,
-      // width: "100%"
       zIndex: 1,
       borderRadius: '50%'
     },

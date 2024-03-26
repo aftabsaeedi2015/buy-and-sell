@@ -9,7 +9,6 @@ import {
   SafeAreaView
 } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome";
-// import {MapView,Marker} from 'react-native-maps';
 import ListCompactItem from "../styledComponents/listCompactItem";
 import { useRoute,useFocusEffect } from "@react-navigation/native";
 import {

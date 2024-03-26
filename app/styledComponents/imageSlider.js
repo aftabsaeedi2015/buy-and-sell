@@ -4,11 +4,6 @@ import { SlideInDown } from 'react-native-reanimated';
 import Icon from "react-native-vector-icons/FontAwesome";
 
 
-// const images =[
-//     require('../assets/background.jpeg'),
-//     require('../assets/phone.jpg')
-// ]
-
 
 function ImageSlider({images}) {
     const [index, setIndex] = useState(0)
@@ -31,7 +26,7 @@ function ImageSlider({images}) {
             height: 400,
             width: '100%',
             left: slide,
-            
+
         },
         image:{
             height: 400,

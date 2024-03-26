@@ -82,7 +82,7 @@ function ListCompactItem({ navigation, item, fetchRefreshedData }) {
     try {
       if (adExistsInFavorites) {
         // If the item is already in favorites, remove it
-        const response = await removeFromFavorites(userId, item.adId); // You need to create this function
+        const response = await removeFromFavorites(userId, item.adId);
         handleSnackbar(response);
         opacity.value = withTiming(20,{
           duration: 100,
